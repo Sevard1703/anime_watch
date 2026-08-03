@@ -244,7 +244,7 @@
             <p class="card__desc">${anime.description}</p>
             <div class="card__actions">
               <a class="btn btn--ghost" href="anime.html?anime=${anime.id}">Подробнее</a>
-              <button class="btn btn--primary heart-btn ${app.state.favorites.includes(anime.id) ? 'is-active' : ''}" data-favorite="${anime.id}">♥</button>
+              <button class="btn btn--primary heart-btn ${app.state.favorites.includes(anime.id) ? 'is-active' : ''}" data-favorite="${anime.id}"><i class="fa-regular fa-heart"></i></button>
             </div>
           </div>`;
         container.appendChild(card);

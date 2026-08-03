@@ -37,7 +37,7 @@ body {
     radial-gradient(circle at top left, rgba(108, 140, 255, 0.16), transparent 30%),
     linear-gradient(180deg, var(--bg) 0%, #04050a 100%);
   color: var(--text);
-  cursor: none;
+  cursor: auto;
   min-height: 100vh;
   animation: pageFadeIn 800ms var(--transition);
 }
@@ -586,17 +586,9 @@ button { cursor: none; }
 .toast.is-visible { transform: translateY(0); opacity: 1; }
 
 .cursor-dot, .cursor-ring {
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 110;
-  transform: translate(-50%, -50%);
-  transition: transform 180ms ease, width 180ms ease, height 180ms ease;
+  /* Hidden: restore native system cursor while keeping elements for backwards compatibility */
+  display: none !important;
 }
-.cursor-dot { width: 8px; height: 8px; background: var(--accent-strong); border-radius: 999px; }
-.cursor-ring { width: 30px; height: 30px; border: 1px solid rgba(255,255,255,0.4); border-radius: 999px; }
-body.cursor-hover .cursor-ring { width: 48px; height: 48px; border-color: var(--accent-strong); }
 
 .skeleton {
   position: relative;
