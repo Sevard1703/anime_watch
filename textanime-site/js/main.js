@@ -103,8 +103,7 @@
   app.state = {
     favorites: JSON.parse(localStorage.getItem('anime-favorites') || '[]'),
     ratings: JSON.parse(localStorage.getItem('anime-ratings') || '{}'),
-    theme: localStorage.getItem('anime-theme') || 'dark',
-    mood: localStorage.getItem('anime-mood') || 'epic'
+    // theme and mood removed — toolbar controls were removed
   };
 
   app.utils = {
@@ -123,8 +122,7 @@
     saveState() {
       localStorage.setItem('anime-favorites', JSON.stringify(app.state.favorites));
       localStorage.setItem('anime-ratings', JSON.stringify(app.state.ratings));
-      localStorage.setItem('anime-theme', app.state.theme);
-      localStorage.setItem('anime-mood', app.state.mood);
+      // theme and mood not stored
     }
   };
 
@@ -142,27 +140,7 @@
     });
   }
 
-  function initTheme() {
-    document.documentElement.dataset.theme = app.state.theme;
-    document.documentElement.dataset.mood = app.state.mood;
-    const toggle = document.querySelector('[data-theme-toggle]');
-    if (toggle) {
-      toggle.addEventListener('click', () => {
-        app.state.theme = app.state.theme === 'dark' ? 'oled' : 'dark';
-        document.documentElement.dataset.theme = app.state.theme;
-        app.utils.saveState();
-      });
-    }
-    const moodSelect = document.querySelector('[data-mood-select]');
-    if (moodSelect) {
-      moodSelect.value = app.state.mood;
-      moodSelect.addEventListener('change', (event) => {
-        app.state.mood = event.target.value;
-        document.documentElement.dataset.mood = app.state.mood;
-        app.utils.saveState();
-      });
-    }
-  }
+  // initTheme removed — toolbar theme/mood controls deleted
 
   function initReveal() {
     const items = document.querySelectorAll('.reveal');
@@ -332,7 +310,6 @@
 
   function initPage() {
     initCursor();
-    initTheme();
     initReveal();
     initSearch();
     initLuckyButton();

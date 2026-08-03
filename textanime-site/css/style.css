@@ -15,18 +15,7 @@
   --transition: 280ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-:root[data-theme="oled"] {
-  --bg: #000000;
-  --bg-soft: #07090d;
-  --surface: rgba(255, 255, 255, 0.04);
-  --surface-strong: rgba(255, 255, 255, 0.07);
-  --line: rgba(255, 255, 255, 0.08);
-}
-
-:root[data-mood="sad"] { --accent: #7a8cff; --accent-strong: #9db0ff; }
-:root[data-mood="epic"] { --accent: #68d7ff; --accent-strong: #95f0ff; }
-:root[data-mood="fun"] { --accent: #ff8ecb; --accent-strong: #ffc3e5; }
-:root[data-mood="vibe"] { --accent: #a88bff; --accent-strong: #ccb9ff; }
+/* Theme/mood variants removed — toolbar controls deleted */
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
