@@ -45,7 +45,10 @@ AnimeWatch — это современный многостраничный са
 
 ## Структура
 
-anime-site/<br>
+anime_watch/<br>
+├── LICENSE<br>
+├── README.md<br>
+│
 ├── index.html<br>
 ├── catalog.html<br>
 ├── categories.html<br>
@@ -53,12 +56,26 @@ anime-site/<br>
 ├── watch.html<br>
 ├── search.html<br>
 ├── profile.html<br>
-├── css/<br>
-│   └── style.css<br>
-├── js/<br>
-│   ├── main.js<br>
-│   ├── ratings.js<br>
-│   ├── catalog.js<br>
-│   └── player.js<br>
-└── assets/<br>
-    └── (папка для возможных иконок/изображений)<br>
+├── styles.css<br>
+├── script.js<br>
+│
+└── textanime-site/<br>
+    ├── index.html<br>
+    ├── catalog.html<br>
+    ├── categories.html<br>
+    ├── anime.html<br>
+    ├── watch.html<br>
+    ├── search.html<br>
+    ├── profile.html<br>
+    │
+    ├── assets/<br>
+    │   └── .gitkeep<br>
+    │
+    ├── css/<br>
+    │   └── style.css<br>
+    │
+    └── js/
+        ├── main.js<br>
+        ├── catalog.js<br>
+        ├── player.js<br>
+        └── ratings.js<br>
