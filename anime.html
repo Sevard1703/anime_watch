@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AnimePulse — Тайтл</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="anime">
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html">AnimePulse</a>
+      <form class="search-form" action="search.html" method="get">
+        <input name="q" type="search" placeholder="Поиск аниме..." aria-label="Поиск аниме" />
+        <button type="submit">Найти</button>
+      </form>
+      <nav class="main-nav">
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="categories.html">Жанры</a>
+        <a href="profile.html">Профиль</a>
+      </nav>
+      <a class="btn btn-primary" href="profile.html">Войти</a>
+      <button class="mobile-menu-toggle" aria-label="Открыть меню">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="anime-hero" id="anime-hero">
+      <div class="anime-hero-cover"></div>
+      <div class="anime-hero-info">
+        <div class="poster-frame"><img id="anime-poster" src="https://picsum.photos/seed/anime-hero/400/560" alt="Постер аниме" /></div>
+        <div class="anime-meta">
+          <span id="anime-status" class="badge">Онгоинг</span>
+          <h1 id="anime-title">Заголовок тайтла</h1>
+          <p id="anime-original" class="subtitle">Original Title</p>
+          <div class="anime-details">
+            <span id="anime-rating">9.2</span>
+            <span id="anime-year">2025</span>
+            <span id="anime-type">TV</span>
+            <span id="anime-episodes">24 серии</span>
+          </div>
+          <p id="anime-description">Описание тайтла появится здесь после выбора из каталога.</p>
+          <div class="hero-actions">
+            <button class="btn btn-primary" id="favorite-toggle">Добавить в избранное</button>
+            <a class="btn btn-secondary" id="watch-first" href="watch.html">Смотреть с 1 серии</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="anime-tabs-section">
+      <div class="tab-list" role="tablist">
+        <button class="tab-button active" data-tab="description">Описание</button>
+        <button class="tab-button" data-tab="episodes">Серии</button>
+        <button class="tab-button" data-tab="characters">Персонажи</button>
+        <button class="tab-button" data-tab="related">Связанные</button>
+        <button class="tab-button" data-tab="comments">Комментарии</button>
+      </div>
+      <div class="tab-content active" id="tab-description">
+        <h2>Описание</h2>
+        <p>Подробная информация о выбранном аниме, его мире, героях и сюжетных ходах.</p>
+      </div>
+      <div class="tab-content" id="tab-episodes">
+        <div class="episodes-panel">
+          <div class="episode-controls">
+            <label>Озвучка</label>
+            <select id="voice-select">
+              <option value="ru">Русская</option>
+              <option value="jp">Оригинал</option>
+            </select>
+          </div>
+          <div class="episode-list" id="anime-episodes-list"></div>
+        </div>
+      </div>
+      <div class="tab-content" id="tab-characters">
+        <h2>Персонажи</h2>
+        <div class="character-grid">
+          <article class="character-card"><strong>Айко</strong><span>Главная героиня</span></article>
+          <article class="character-card"><strong>Рен</strong><span>Опытный маг</span></article>
+          <article class="character-card"><strong>Кай</strong><span>Антагонист</span></article>
+        </div>
+      </div>
+      <div class="tab-content" id="tab-related">
+        <h2>Связанные тайтлы</h2>
+        <div class="anime-grid smaller" id="related-list"></div>
+      </div>
+      <div class="tab-content" id="tab-comments">
+        <h2>Комментарии</h2>
+        <div class="comments">
+          <article class="comment-card"><strong>Нина</strong><p>Потрясающая история и визуал!</p></article>
+          <article class="comment-card"><strong>Михаил</strong><p>Захватывает с первой серии, рекоммендую.</p></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <h3>AnimePulse</h3>
+        <p>Современный портал для поиска, просмотра и коллекционирования любимых аниме.</p>
+      </div>
+      <div class="footer-links">
+        <a href="catalog.html">Каталог</a>
+        <a href="categories.html">Жанры</a>
+        <a href="profile.html">Профиль</a>
+      </div>
+    </div>
+    <div class="footer-copy">© 2026 AnimePulse. Все права защищены.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AnimePulse — Результаты поиска</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="search">
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html">AnimePulse</a>
+      <form class="search-form" action="search.html" method="get">
+        <input name="q" type="search" placeholder="Поиск аниме..." aria-label="Поиск аниме" />
+        <button type="submit">Найти</button>
+      </form>
+      <nav class="main-nav">
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="categories.html">Жанры</a>
+        <a href="profile.html">Профиль</a>
+      </nav>
+      <a class="btn btn-primary" href="profile.html">Войти</a>
+      <button class="mobile-menu-toggle" aria-label="Открыть меню">☰</button>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="section-header">
+      <div>
+        <h1>Результаты поиска</h1>
+        <p id="search-summary">Найдено...</p>
+      </div>
+      <form class="search-form-inline" action="search.html" method="get">
+        <input name="q" id="search-query" type="search" placeholder="Поиск по названию..." aria-label="Поиск по названию" />
+        <button type="submit">Найти</button>
+      </form>
+    </div>
+    <div class="anime-grid" id="search-results"></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <h3>AnimePulse</h3>
+        <p>Современный портал для поиска, просмотра и коллекционирования любимых аниме.</p>
+      </div>
+      <div class="footer-links">
+        <a href="catalog.html">Каталог</a>
+        <a href="categories.html">Жанры</a>
+        <a href="profile.html">Профиль</a>
+      </div>
+    </div>
+    <div class="footer-copy">© 2026 AnimePulse. Все права защищены.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

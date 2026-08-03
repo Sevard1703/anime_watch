@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AnimePulse — Профиль</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="profile">
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html">AnimePulse</a>
+      <form class="search-form" action="search.html" method="get">
+        <input name="q" type="search" placeholder="Поиск аниме..." aria-label="Поиск аниме" />
+        <button type="submit">Найти</button>
+      </form>
+      <nav class="main-nav">
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="categories.html">Жанры</a>
+        <a href="profile.html">Профиль</a>
+      </nav>
+      <a class="btn btn-primary" href="profile.html">Войти</a>
+      <button class="mobile-menu-toggle" aria-label="Открыть меню">☰</button>
+    </div>
+  </header>
+
+  <main class="profile-page">
+    <section class="section section-intro">
+      <h1>Личный кабинет</h1>
+      <p>Здесь собраны ваши избранные тайтлы, история просмотра и настройки.</p>
+    </section>
+
+    <section class="profile-cards">
+      <article class="profile-card">
+        <h2>Избранное</h2>
+        <div class="anime-grid" id="profile-favorites"></div>
+      </article>
+      <article class="profile-card">
+        <h2>История просмотра</h2>
+        <div class="history-list" id="profile-history">
+          <div class="history-item"><strong>Сердце из стали</strong><span>Серия 8</span></div>
+          <div class="history-item"><strong>Ночной рыцарь</strong><span>Серия 2</span></div>
+        </div>
+      </article>
+      <article class="profile-card">
+        <h2>Настройки</h2>
+        <div class="settings-list">
+          <div class="setting-row"><span>Уведомления</span><button class="btn btn-secondary">Включено</button></div>
+          <div class="setting-row"><span>Тёмная тема</span><button class="btn btn-secondary">Включено</button></div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <h3>AnimePulse</h3>
+        <p>Современный портал для поиска, просмотра и коллекционирования любимых аниме.</p>
+      </div>
+      <div class="footer-links">
+        <a href="catalog.html">Каталог</a>
+        <a href="categories.html">Жанры</a>
+        <a href="profile.html">Профиль</a>
+      </div>
+    </div>
+    <div class="footer-copy">© 2026 AnimePulse. Все права защищены.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

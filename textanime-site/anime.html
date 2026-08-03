@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AnimeSite — Тайтл</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="anime">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+    <header class="topbar glass">
+      <div class="container topbar__inner">
+        <a class="brand" href="index.html">
+          <span class="brand__mark"></span>
+          <span>AnimeSite</span>
+        </a>
+        <nav class="nav">
+          <a href="index.html">Главная</a>
+          <a href="catalog.html">Каталог</a>
+          <a href="categories.html">Жанры</a>
+          <a href="profile.html">Профиль</a>
+        </nav>
+        <form class="search-form" data-search-form>
+          <input type="text" placeholder="Поиск аниме" aria-label="Поиск аниме" />
+          <button class="btn btn--primary" type="submit">Найти</button>
+        </form>
+        <div class="toolbar">
+          <select class="select-pill" data-mood-select>
+            <option value="epic">Эпичное</option>
+            <option value="sad">Грустное</option>
+            <option value="fun">Рофл</option>
+            <option value="vibe">Вайбовое</option>
+          </select>
+          <button class="btn btn--ghost" data-theme-toggle>OLED</button>
+          <button class="btn btn--primary" data-lucky>Мне повезёт</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="section reveal">
+        <div class="panel panel--hero hero-card">
+          <div class="hero-card__poster">
+            <img id="anime-poster" src="https://picsum.photos/seed/default/600/900" alt="Постер" />
+          </div>
+          <div class="hero-card__content">
+            <div class="card__meta">
+              <span class="badge" id="anime-status">Онгоинг</span>
+              <span class="badge" id="anime-year">2026</span>
+              <span class="badge" id="anime-type">TV</span>
+            </div>
+            <h1 id="anime-title">Название</h1>
+            <p class="search-summary" id="anime-original">Original title</p>
+            <div id="anime-info"></div>
+            <div class="hero__actions">
+              <button class="btn btn--primary" id="favorite-button">Добавить в избранное</button>
+              <a class="btn btn--ghost" id="watch-button" href="watch.html">Смотреть</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <div class="tabs">
+          <button class="tab-btn active" data-target="tab-about">Описание</button>
+          <button class="tab-btn" data-target="tab-episodes">Серии</button>
+          <button class="tab-btn" data-target="tab-related">Связанные</button>
+        </div>
+        <div class="panel tab-pane active" id="tab-about">
+          <h3>Описание</h3>
+          <p id="anime-description">Описание появится здесь.</p>
+        </div>
+        <div class="panel tab-pane" id="tab-episodes">
+          <h3>Серии</h3>
+          <div class="episode-list" id="episode-list"></div>
+        </div>
+        <div class="panel tab-pane" id="tab-related">
+          <h3>Связанные</h3>
+          <div class="related-list" id="related-list"></div>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <div class="panel">
+          <h3>Оценка тайтла</h3>
+          <div class="rating-widget" data-rating-widget data-anime-id="">
+            <div class="rating-stars" data-stars></div>
+            <div class="card__meta" id="rating-summary"></div>
+            <button class="btn btn--ghost" data-clear-rating>Удалить оценку</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div>© 2026 AnimeSite. Минимализм, который хочется смотреть снова.</div>
+        <div>Каталог · Жанры · Профиль</div>
+      </div>
+    </footer>
+
+    <div class="toast"></div>
+    <script src="js/main.js"></script>
+    <script src="js/ratings.js"></script>
+    <script src="js/catalog.js"></script>
+    <script src="js/player.js"></script>
+  </body>
+</html>

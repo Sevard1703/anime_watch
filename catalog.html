@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AnimePulse — Каталог</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="catalog">
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html">AnimePulse</a>
+      <form class="search-form" action="search.html" method="get">
+        <input name="q" type="search" placeholder="Поиск аниме..." aria-label="Поиск аниме" />
+        <button type="submit">Найти</button>
+      </form>
+      <nav class="main-nav">
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="categories.html">Жанры</a>
+        <a href="profile.html">Профиль</a>
+      </nav>
+      <a class="btn btn-primary" href="profile.html">Войти</a>
+      <button class="mobile-menu-toggle" aria-label="Открыть меню">☰</button>
+    </div>
+  </header>
+
+  <main class="catalog-page">
+    <section class="catalog-head">
+      <div>
+        <h1>Каталог аниме</h1>
+        <p>Поиск, фильтрация и сортировка. Найди идеальный тайтл для вечернего просмотра.</p>
+      </div>
+      <div class="catalog-search">
+        <input id="catalog-search" type="text" placeholder="Поиск по названию..." aria-label="Поиск по названию" />
+      </div>
+    </section>
+
+    <section class="catalog-layout">
+      <aside class="catalog-filters">
+        <div class="filter-card">
+          <h3>Жанры</h3>
+          <div id="filter-genres" class="filter-list"></div>
+        </div>
+        <div class="filter-card">
+          <h3>Год</h3>
+          <select id="filter-year">
+            <option value="all">Все</option>
+          </select>
+        </div>
+        <div class="filter-card">
+          <h3>Статус</h3>
+          <select id="filter-status">
+            <option value="all">Все</option>
+            <option value="Airing">Онгоинг</option>
+            <option value="Finished">Завершено</option>
+          </select>
+        </div>
+        <div class="filter-card">
+          <h3>Тип</h3>
+          <select id="filter-type">
+            <option value="all">Все</option>
+            <option value="TV">TV</option>
+            <option value="Movie">Movie</option>
+            <option value="OVA">OVA</option>
+          </select>
+        </div>
+        <div class="filter-card">
+          <h3>Сортировка</h3>
+          <select id="filter-sort">
+            <option value="popularity">Популярность</option>
+            <option value="rating">Рейтинг</option>
+            <option value="year">Год</option>
+            <option value="updated">Последние</option>
+          </select>
+        </div>
+        <button class="btn btn-secondary" id="clear-filters">Сбросить фильтры</button>
+      </aside>
+
+      <section class="catalog-results">
+        <div class="catalog-meta">
+          <h2>Результаты</h2>
+          <p id="catalog-count">Загружаем...</p>
+        </div>
+        <div class="anime-grid" id="catalog-results"></div>
+        <div class="pagination" id="catalog-pagination"></div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <h3>AnimePulse</h3>
+        <p>Современный портал для поиска, просмотра и коллекционирования любимых аниме.</p>
+      </div>
+      <div class="footer-links">
+        <a href="catalog.html">Каталог</a>
+        <a href="categories.html">Жанры</a>
+        <a href="profile.html">Профиль</a>
+      </div>
+    </div>
+    <div class="footer-copy">© 2026 AnimePulse. Все права защищены.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

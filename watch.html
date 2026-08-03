@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AnimePulse — Смотреть</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="watch">
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html">AnimePulse</a>
+      <form class="search-form" action="search.html" method="get">
+        <input name="q" type="search" placeholder="Поиск аниме..." aria-label="Поиск аниме" />
+        <button type="submit">Найти</button>
+      </form>
+      <nav class="main-nav">
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="categories.html">Жанры</a>
+        <a href="profile.html">Профиль</a>
+      </nav>
+      <a class="btn btn-primary" href="profile.html">Войти</a>
+      <button class="mobile-menu-toggle" aria-label="Открыть меню">☰</button>
+    </div>
+  </header>
+
+  <main class="watch-page">
+    <section class="watch-player">
+      <div class="watch-topbar">
+        <div>
+          <h1 id="watch-title">Смотреть аниме</h1>
+          <p id="watch-episode">Эпизод 1</p>
+        </div>
+        <div class="watch-actions">
+          <label>Озвучка</label>
+          <select id="watch-voice">
+            <option value="ru">Русская</option>
+            <option value="jp">Оригинальная</option>
+          </select>
+        </div>
+      </div>
+      <div class="video-wrapper">
+        <video id="video-player" controls poster="https://picsum.photos/seed/watch/1200/675">
+          <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+          Ваш браузер не поддерживает видео.
+        </video>
+      </div>
+      <div class="watch-navigation">
+        <button class="btn btn-secondary" id="prev-episode">Предыдущая серия</button>
+        <button class="btn btn-primary" id="next-episode">Следующая серия</button>
+      </div>
+    </section>
+
+    <aside class="watch-sidebar">
+      <div class="sidebar-card">
+        <h2>Список серий</h2>
+        <div class="episode-list" id="watch-episode-list"></div>
+      </div>
+      <div class="sidebar-card">
+        <h2>Рекомендации</h2>
+        <div class="anime-grid smaller" id="watch-recommendations"></div>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <h3>AnimePulse</h3>
+        <p>Современный портал для поиска, просмотра и коллекционирования любимых аниме.</p>
+      </div>
+      <div class="footer-links">
+        <a href="catalog.html">Каталог</a>
+        <a href="categories.html">Жанры</a>
+        <a href="profile.html">Профиль</a>
+      </div>
+    </div>
+    <div class="footer-copy">© 2026 AnimePulse. Все права защищены.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AnimeSite — Каталог</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="catalog">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+    <header class="topbar glass">
+      <div class="container topbar__inner">
+        <a class="brand" href="index.html">
+          <span class="brand__mark"></span>
+          <span>AnimeSite</span>
+        </a>
+        <nav class="nav">
+          <a href="index.html">Главная</a>
+          <a href="catalog.html">Каталог</a>
+          <a href="categories.html">Жанры</a>
+          <a href="profile.html">Профиль</a>
+        </nav>
+        <form class="search-form" data-search-form>
+          <input type="text" placeholder="Поиск аниме" aria-label="Поиск аниме" />
+          <button class="btn btn--primary" type="submit">Найти</button>
+        </form>
+        <div class="toolbar">
+          <select class="select-pill" data-mood-select>
+            <option value="epic">Эпичное</option>
+            <option value="sad">Грустное</option>
+            <option value="fun">Рофл</option>
+            <option value="vibe">Вайбовое</option>
+          </select>
+          <button class="btn btn--ghost" data-theme-toggle>OLED</button>
+          <button class="btn btn--primary" data-lucky>Мне повезёт</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="section reveal">
+        <div class="section__head">
+          <div>
+            <h1 class="section__title">Каталог</h1>
+            <p class="search-summary" id="catalog-summary">Загружаем подборку…</p>
+          </div>
+        </div>
+        <div class="layout">
+          <aside class="sidebar">
+            <h3>Фильтры</h3>
+            <form id="catalog-filters">
+              <div class="filter-group">
+                <label>Жанр</label>
+                <input class="input-pill" name="genre" type="text" placeholder="Например: Экшен" />
+              </div>
+              <div class="filter-group">
+                <label>Статус</label>
+                <select class="select-pill" name="status">
+                  <option value="all">Все</option>
+                  <option value="Онгоинг">Онгоинг</option>
+                  <option value="Завершён">Завершён</option>
+                </select>
+              </div>
+              <div class="filter-group">
+                <label>Тип</label>
+                <select class="select-pill" name="type">
+                  <option value="all">Все</option>
+                  <option value="TV">TV</option>
+                  <option value="Movie">Movie</option>
+                  <option value="OVA">OVA</option>
+                </select>
+              </div>
+              <div class="filter-group">
+                <label>Рейтинг от</label>
+                <select class="select-pill" name="rating">
+                  <option value="0">Любой</option>
+                  <option value="8">8+</option>
+                  <option value="8.5">8.5+</option>
+                  <option value="9">9+</option>
+                </select>
+              </div>
+              <div class="filter-group">
+                <label>Сортировка</label>
+                <select class="select-pill" name="sort">
+                  <option value="popularity">По популярности</option>
+                  <option value="rating">По рейтингу</option>
+                  <option value="year">По году</option>
+                  <option value="title">По названию</option>
+                </select>
+              </div>
+              <div class="filter-group">
+                <label>Поиск по названию</label>
+                <input class="input-pill" name="search" type="text" placeholder="Поиск" />
+              </div>
+            </form>
+          </aside>
+          <section>
+            <div class="grid grid--cards" id="catalog-grid"></div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div>© 2026 AnimeSite. Минимализм, который хочется смотреть снова.</div>
+        <div>Каталог · Жанры · Профиль</div>
+      </div>
+    </footer>
+
+    <div class="toast"></div>
+    <script src="js/main.js"></script>
+    <script src="js/ratings.js"></script>
+    <script src="js/catalog.js"></script>
+    <script src="js/player.js"></script>
+  </body>
+</html>

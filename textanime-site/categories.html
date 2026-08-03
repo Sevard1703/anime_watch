@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AnimeSite — Жанры</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="categories">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+    <header class="topbar glass">
+      <div class="container topbar__inner">
+        <a class="brand" href="index.html">
+          <span class="brand__mark"></span>
+          <span>AnimeSite</span>
+        </a>
+        <nav class="nav">
+          <a href="index.html">Главная</a>
+          <a href="catalog.html">Каталог</a>
+          <a href="categories.html">Жанры</a>
+          <a href="profile.html">Профиль</a>
+        </nav>
+        <form class="search-form" data-search-form>
+          <input type="text" placeholder="Поиск аниме" aria-label="Поиск аниме" />
+          <button class="btn btn--primary" type="submit">Найти</button>
+        </form>
+        <div class="toolbar">
+          <select class="select-pill" data-mood-select>
+            <option value="epic">Эпичное</option>
+            <option value="sad">Грустное</option>
+            <option value="fun">Рофл</option>
+            <option value="vibe">Вайбовое</option>
+          </select>
+          <button class="btn btn--ghost" data-theme-toggle>OLED</button>
+          <button class="btn btn--primary" data-lucky>Мне повезёт</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="section reveal">
+        <div class="section__head">
+          <div>
+            <h1 class="section__title">Жанры</h1>
+            <p class="search-summary">Выбери настроение и перейди к подборке.</p>
+          </div>
+        </div>
+        <div class="category-grid">
+          <a class="category-card" href="catalog.html?genre=Экшен"><strong>Экшен</strong><span>Быстрый ритм и напряжение.</span></a>
+          <a class="category-card" href="catalog.html?genre=Романтика"><strong>Романтика</strong><span>Чувства, неловкость и тепло.</span></a>
+          <a class="category-card" href="catalog.html?genre=Фэнтези"><strong>Фэнтези</strong><span>Миры, магия и судьба.</span></a>
+          <a class="category-card" href="catalog.html?genre=Исекай"><strong>Исекай</strong><span>Переход в другой мир.</span></a>
+          <a class="category-card" href="catalog.html?genre=Сёнэн"><strong>Сёнэн</strong><span>Прогресс, амбиции и дружба.</span></a>
+          <a class="category-card" href="catalog.html?genre=Сёдзё"><strong>Сёдзё</strong><span>Эмоциональная глубина.</span></a>
+          <a class="category-card" href="catalog.html?genre=Хоррор"><strong>Хоррор</strong><span>Тени, страх и мрак.</span></a>
+          <a class="category-card" href="catalog.html?genre=Мистика"><strong>Мистика</strong><span>Загадки и тонкий холод.</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div>© 2026 AnimeSite. Минимализм, который хочется смотреть снова.</div>
+        <div>Каталог · Жанры · Профиль</div>
+      </div>
+    </footer>
+
+    <div class="toast"></div>
+    <script src="js/main.js"></script>
+    <script src="js/ratings.js"></script>
+    <script src="js/catalog.js"></script>
+    <script src="js/player.js"></script>
+  </body>
+</html>
